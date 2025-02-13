@@ -1,4 +1,4 @@
-# XR_Core
+# XR Core
 
 Download the Oculus Meta app: https://www.oculus.com/download_app/?id=1582076955407037&srsltid=AfmBOops1knJgWN7ZhhdRGRMHZ9LR83JrWQqLwQbV-3IgtqTaksmp3-4 </br>
 
