@@ -1,48 +1,57 @@
-# XR Core
+# Unity Quest 3D Project
 
-Download the Oculus Meta app: https://www.oculus.com/download_app/?id=1582076955407037&srsltid=AfmBOops1knJgWN7ZhhdRGRMHZ9LR83JrWQqLwQbV-3IgtqTaksmp3-4 </br>
+## Setup Instructions
 
-Make hotspot so the Meta Quest 3 can connect to the network </br>
+### Meta Quest software setup
 
-Connect the Meta Quest 3 with cable to the computer </br>
+1. Download the Meta Quest
+   app [here](https://www.oculus.com/download_app/?id=1582076955407037&srsltid=AfmBOops1knJgWN7ZhhdRGRMHZ9LR83JrWQqLwQbV-3IgtqTaksmp3-4)
+2. Create a Meta Quest account (existing or new) and log in to the app
+3. Make sure Meta Quest and PC are on the same Wi-Fi network
+4. Connect the Quest with a USB-C cable to the PC
+5. Setup the Quest headset in the Meta app
+6. Download the Meta Quest Developer Hub
+   app [here](https://developers.meta.com/horizon/downloads/package/oculus-developer-hub-win/)
+7. Turn on developer mode on for the Meta Quest
+   3 [(official documentation)](https://developers.meta.com/horizon/documentation/native/android/mobile-device-setup/)
+8. Enable ADB over Wi-Fi for the headset in the Developer hub app --> Device Manager --> Device Actions --> ADB over
+   Wi-Fi
+9. Allow unknown sources
+    - Meta Quest Link app --> Settings --> General --> Enable "Unknown Sources"
 
-Download the Meta Quest Developer Hub app:  https://developers.meta.com/horizon/downloads/package/oculus-developer-hub-win/ </br>
+### Unity Setup
 
-Turn on developer mode on for the Meta Quest 3 </br>
+1. Download Unity Hub [here](https://unity.com/download)
+2. Download the latest LTS for Unity and download Android (SDK, NDK Tools and OpenJDK)
+3. Create a new Universal 3D project
+4. Install XR Plugin Management:
+    - Edit --> Project Settings --> XR Plugin Management --> Install XR Plugin Management
+5. Add all Meta and Oculus profiles (**Do this for both Android and Windows**)
+    - Edit --> Project Settings --> Project Validation --> Edit --> Add enabled interaction profiles:
+        - Add all Meta and Oculus profiles under the '+' button
+    - Edit --> Project Settings --> Project Validation --> Fix all button
+6. Install XR interaction Toolkit package
+    - Window --> Package Manager --> Unity registry --> Search "XR interaction Toolkit" and install
+    - After install, import Starter Assets under "Samples" button
+    - Edit --> Project Settings --> XR Plugin Management --> OpenXR --> Select "Meta Quest Support"
+7. Fix project validation
+    - Edit --> Project Settings --> Project Validation --> Fix all
+8. Open DemoScene in Unity Scene viewer
+    - Project window --> Assets --> Samples --> XR Interaction Toolkit --> 3.0.7 --> Double click Starter Assets -->
+      Open "DemoScene"
+9. Switch build platform to Android
+    - File --> Build Profiles --> Android --> Switch platform
+10. Add current Scene to Scene list
+    - File --> Build Profiles --> Android --> Open Scene list --> Uncheck "Scenes/SampleScene" --> Add Open Scenes
+11. Set the device to run the project on
+    - File --> Build Profiles --> Android --> Refresh --> Run Device --> Select Meta Quest device
+12. Build and deploy the app on the Quest
+    - File --> Build Profiles --> Android --> Build
+    - File --> Build Profiles --> Android --> Check Development Build box --> Patch
+13. Launch the app on the Quest
+    - Library --> Unknown Sources --> Open the project
+    - Enjoy :D
 
-Go into the Meta Quest Developer Hub app and go to Device Manager and enable the ADB over Wi-Fi setting so the Meta Quest 3 can be used wireless </br>
-
-Download Unity Hub: https://unity.com/download </br>
-
-Download the lastest LTS for Unity and download Android (SDK, NDK Tools and OpenJDK) with this download </br>
-
-Make a Universal 3D project </br>
-
-Go to Edit --> Project Settings... --> XR Plugin Management and press on Install XR Plugin Mangement </br>
-
-Click on Open XR </br>
-
-**Do this for android and windows** </br>
-Go to Project Validation in the list click on the Edit button. After this add enabled interaction profiles by clicking on the + button and add all Meta and Oculus profiles. </br> 
-Go back to Project Validation and press the fix all button </br>
-
-Go to Window --> Package Manager --> Unity registry and install the XR interaction Toolkit </br>
-
-After that click on the Samples button and click on the Import button for the Starter Assets </br>
-
-Go back to Project Validation and press fix button for the warning </br>
-
-In project unfold the 3.0.7 folder and keep unfolding the folders until the folder Start Assets and double click on the DemoScene to open the demo project </br>
-
-Go to File --> Build Profiles and then click on Android, switch platform, click on the button Open Scene List, click on the button Add Open Scences and afterwards uncheck the Scences/SampleScene </br> 
-
-Below Android you can select the Run Device by clicking on refresh and then selecting the device in the list </br>
-
-Check the Development Build checkbox </br>
-
-Go to Edit --> Project Setting... --> XR Plug-in Management --> OpenXR under the OpenXR Feature Groups select Meta Quest Support </br>
-
-Click on Build, Patch and afterwards click on Yes under the Android page to get the DemoScene into the library of the Meta Quest 3 </br>
 
 
 
