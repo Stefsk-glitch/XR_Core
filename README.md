@@ -32,7 +32,7 @@ After that click on the Samples button and click on the Import button for the St
 
 Go back to Project Validation and press fix button for the warning </br>
 
-In project unfold the 3.0.7 folder and keep unfolding the folders until the folder Start Assets and double click on the Demo Scene to open the demo project </br>
+In project unfold the 3.0.7 folder and keep unfolding the folders until the folder Start Assets and double click on the DemoScene to open the demo project </br>
 
 Go to File --> Build Profiles and then click on Android, switch platform, click on the button Open Scene List, click on the button Add Open Scences and afterwards uncheck the Scences/SampleScene </br> 
 
@@ -40,7 +40,7 @@ Below Android you can select the Run Device by clicking on refresh and then sele
 
 Go to Edit --> Project Setting... --> XR Plug-in Management --> OpenXR under the OpenXR Feature Groups select Meta Quest Support </br>
 
-Click on Patch to get the Demo Scene into the library of the Meta Quest 3 </br>
+Click on Patch to get the DemoScene into the library of the Meta Quest 3 </br>
 
 
 
