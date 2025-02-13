@@ -38,6 +38,8 @@ Go to File --> Build Profiles and then click on Android, switch platform, click 
 
 Below Android you can select the Run Device by clicking on refresh and then selecting the device in the list </br>
 
+Check the Development Build checkbox </br>
+
 Go to Edit --> Project Setting... --> XR Plug-in Management --> OpenXR under the OpenXR Feature Groups select Meta Quest Support </br>
 
 Click on Patch under the Android page to get the DemoScene into the library of the Meta Quest 3 </br>
