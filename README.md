@@ -42,7 +42,7 @@ Check the Development Build checkbox </br>
 
 Go to Edit --> Project Setting... --> XR Plug-in Management --> OpenXR under the OpenXR Feature Groups select Meta Quest Support </br>
 
-Click on Patch under the Android page to get the DemoScene into the library of the Meta Quest 3 </br>
+Click on Patch and afterwards click on Yes under the Android page to get the DemoScene into the library of the Meta Quest 3 </br>
 
 
 
