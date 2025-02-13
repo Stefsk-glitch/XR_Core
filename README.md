@@ -22,7 +22,7 @@ Go to Edit --> Project Settings... --> XR Plugin Management and press on Install
 
 Click on Open XR </br>
 
-**Do this for android and windows**
+**Do this for android and windows** </br>
 Go to Project Validation in the list click on the Edit button. After this add enabled interaction profiles by clicking on the + button and add all Meta and Oculus profiles. </br> 
 
 Go back to Project Validation and press the fix all button </br>
