@@ -1,9 +1,9 @@
 # XR Core
 
 Download the Oculus Meta app: https://www.oculus.com/download_app/?id=1582076955407037&srsltid=AfmBOops1knJgWN7ZhhdRGRMHZ9LR83JrWQqLwQbV-3IgtqTaksmp3-4 </br>
-
+</br>
 Make hotspot so the Meta Quest 3 can connect to the network </br>
-
+</br>
 Connect the Meta Quest 3 with cable to the computer </br>
 
 Download the Meta Quest Developer Hub app:  https://developers.meta.com/horizon/downloads/package/oculus-developer-hub-win/ </br>
