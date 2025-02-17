@@ -52,7 +52,16 @@
     - Library --> Unknown Sources --> Open the project
     - Enjoy :D
 
+### Problems we faced during the make of the project
 
+When attempting to uninstall our game on the Meta Quest 3 by navigating to Library → Unknown Sources → Three Dots → Uninstall, the game did not uninstall as expected. This appears to be a common issue within the Meta community. </br>
+
+After researching the problem on the Meta forums, we found a solution: </br>
+	1.	Open Meta Developer Hub
+	2.	Go to the Device section
+	3.	Run the following command: '''adb uninstall <package>'''
+
+This successfully removes the game from the device so we could patch our game to the Meta Quest 3 again. </br>
 
 
 
