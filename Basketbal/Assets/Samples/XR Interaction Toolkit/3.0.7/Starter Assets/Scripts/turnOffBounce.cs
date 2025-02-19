@@ -1,0 +1,37 @@
+using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
+
+public class TurnOffBounce : MonoBehaviour
+{
+    private XRGrabInteractable grabInteractable;
+    private Collider objectCollider;
+
+    public PhysicsMaterial bouncyMaterial;
+    public PhysicsMaterial nonBouncyMaterial;
+
+    void Start()
+    {
+        grabInteractable = GetComponent<XRGrabInteractable>();
+        objectCollider = GetComponent<Collider>();
+
+        grabInteractable.selectEntered.AddListener(OnGrab);
+        grabInteractable.selectExited.AddListener(OnRelease);
+    }
+
+    private void OnGrab(SelectEnterEventArgs args)
+    {
+        objectCollider.material = nonBouncyMaterial;
+    }
+
+    private void OnRelease(SelectExitEventArgs args)
+    {
+        objectCollider.material = bouncyMaterial;
+    }
+
+    private void OnDestroy()
+    {
+        grabInteractable.selectEntered.RemoveListener(OnGrab);
+        grabInteractable.selectExited.RemoveListener(OnRelease);
+    }
+}

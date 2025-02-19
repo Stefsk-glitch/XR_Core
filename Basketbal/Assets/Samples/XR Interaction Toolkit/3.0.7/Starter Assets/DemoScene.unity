@@ -526,6 +526,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f892b54f73f17cf41974b2a5ecfcee3c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1514906033}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f892b54f73f17cf41974b2a5ecfcee3c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1514906037}
   m_SourcePrefab: {fileID: 100100000, guid: f892b54f73f17cf41974b2a5ecfcee3c, type: 3}
 --- !u!1 &1514906030 stripped
 GameObject:
@@ -539,7 +542,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514906030}
-  m_Material: {fileID: 13400000, guid: 2a4471a6d6ea4184784cacd8c60288fe, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -702,6 +705,20 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 2
+--- !u!114 &1514906037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514906030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab1d0fc17b363d489ff5e65467eb33d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bouncyMaterial: {fileID: 13400000, guid: 2a4471a6d6ea4184784cacd8c60288fe, type: 2}
+  nonBouncyMaterial: {fileID: 0}
 --- !u!114 &1592246342 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 742272467831425975, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
