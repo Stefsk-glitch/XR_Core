@@ -54,7 +54,7 @@
 
 ### Problems we faced during the make of the project
 
-#### When attempting to uninstall our game on the Meta Quest 3 by navigating to Library --> Unknown Sources --> Three Dots --> Uninstall, the game did not uninstall as expected. This appears to be a common issue within the Meta community. </br>
+**When attempting to uninstall our game on the Meta Quest 3 by navigating to Library --> Unknown Sources --> Three Dots --> Uninstall, the game did not uninstall as expected. This appears to be a common issue within the Meta community.** </br>
 
 After researching the problem on the Meta forums, we found a solution:
 1.	Open Meta Developer Hub
@@ -63,8 +63,10 @@ After researching the problem on the Meta forums, we found a solution:
 
 This successfully removes the game from the device so we could patch our game to the Meta Quest 3 again. </br>
 
+**Pushing ball against the ground made game crash or physics go crazy.** </br>
 
-
+This problem is solved by adding script to the ball that checks if the ball is grabbed or not. </br>
+If the ball is grabbed it turns off the bounce material otherwise it has the bounce material and the ball is able to bounce. </br>
 
 
 
