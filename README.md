@@ -54,7 +54,7 @@
 
 ### Problems we faced during the make of the project
 
-When attempting to uninstall our game on the Meta Quest 3 by navigating to Library --> Unknown Sources --> Three Dots --> Uninstall, the game did not uninstall as expected. This appears to be a common issue within the Meta community. </br>
+# When attempting to uninstall our game on the Meta Quest 3 by navigating to Library --> Unknown Sources --> Three Dots --> Uninstall, the game did not uninstall as expected. This appears to be a common issue within the Meta community. </br>
 
 After researching the problem on the Meta forums, we found a solution:
 1.	Open Meta Developer Hub
