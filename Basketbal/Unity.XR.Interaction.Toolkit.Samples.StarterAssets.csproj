@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Samples\XR Interaction Toolkit\3.0.7\Starter Assets\Scripts\basketballSpawner.cs" />
+    <Compile Include="Assets\Samples\XR Interaction Toolkit\3.0.7\Starter Assets\Scripts\CollisionDetector1.cs" />
     <Compile Include="Assets\Samples\XR Interaction Toolkit\3.0.7\Starter Assets\Scripts\turnOffBounce.cs" />
     <Compile Include="Assets\Samples\XR Interaction Toolkit\3.0.7\Starter Assets\Scripts\RotationAxisLockGrabTransformer.cs" />
     <Compile Include="Assets\Samples\XR Interaction Toolkit\3.0.7\Starter Assets\DemoSceneAssets\Scripts\IncrementUIText.cs" />
