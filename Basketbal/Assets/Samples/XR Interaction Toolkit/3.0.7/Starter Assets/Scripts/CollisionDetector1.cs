@@ -7,16 +7,25 @@ public class CollisionDetector1 : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        scoreManager.GivePoints(3);
+        if (!other.gameObject.name.Contains("basketball"))
+            scoreManager.GivePoints(3);
+        
+        //scoreManager.setText(other.gameObject.name);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        scoreManager.GivePoints(2);
+        if (!other.gameObject.name.Contains("basketball"))
+            scoreManager.GivePoints(2);
+
+        //scoreManager.setText(other.gameObject.name);
     }
 
     private void OnTriggerStay(Collider other)
     {
-        scoreManager.GivePoints(2);
+        if (!other.gameObject.name.Contains("basketball"))
+            scoreManager.GivePoints(2);
+
+        //scoreManager.setText(other.gameObject.name);
     }
 }
