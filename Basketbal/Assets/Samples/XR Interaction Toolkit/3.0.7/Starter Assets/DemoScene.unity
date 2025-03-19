@@ -630,6 +630,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &504583914 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 9014170783777442263}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &530803801
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,8 +2486,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab1d0fc17b363d489ff5e65467eb33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 504583914}
   bouncyMaterial: {fileID: 13400000, guid: 2a4471a6d6ea4184784cacd8c60288fe, type: 2}
   nonBouncyMaterial: {fileID: 0}
+  scoreManager: {fileID: 721026813}
 --- !u!114 &1592246342 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 742272467831425975, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
