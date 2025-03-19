@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class TimerController : MonoBehaviour
     public float timeValue = 0;
     public bool timerRunning = false;
     public bool countDown = false;
+    public EventHandler timerDone;
 
     void Update()
     {
@@ -21,7 +23,8 @@ public class TimerController : MonoBehaviour
                 else
                 {
                     timeValue = 0;
-                    timerRunning = false; 
+                    timerRunning = false;
+                    timerDone.Invoke(this, null);
                 }
             }
             else

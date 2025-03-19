@@ -1,24 +1,46 @@
+using System;
 using UnityEngine;
-using UnityEngine.UI;  // Use Unity's default UI text instead of TMP
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
     public Text scoreText;
-    public TimerController timerContoller;
-    public int amountPointToReward = 2;
+    public TimerController timerController;
+    public int pointsToReceive = 2;         // default 2
 
     private int score = 0;
+    private bool allowedToScore = false;
 
+    /// <summary>
+    /// When ball goes through hoop
+    /// </summary>
     public void IncreaseScore()
     {
-        score += amountPointToReward; 
+        if (!allowedToScore) return;
+
+        score += pointsToReceive;
         scoreText.text = "Score: " + score;
-        timerContoller.StartTimer();
     }
 
-    public void GivePoints(int points)
+    public void StartTimeGamemode()
     {
-        amountPointToReward = points;
+        timerController.countDown = true;
+        timerController.timeValue = 60;
+        timerController.StartTimer();
+        score = 0;
+        allowedToScore = true;
+        timerController.timerDone += OnTimerDone;
+    }
+
+    private void OnTimerDone(object sender, EventArgs e)
+    {
+        allowedToScore = false;
+        timerController.timerDone -= OnTimerDone;
+    }
+
+    public void SetPointsToReceive(int points)
+    {
+        if (allowedToScore) pointsToReceive = points;
     }
 
     public void setText(string text)
