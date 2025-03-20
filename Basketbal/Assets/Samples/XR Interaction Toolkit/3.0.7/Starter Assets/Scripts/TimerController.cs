@@ -44,6 +44,7 @@ public class TimerController : MonoBehaviour
     public void StopTimer()
     {
         timerRunning = false;
+        timerDone.Invoke(this, null);
     }
 
     public void ResetTimer()

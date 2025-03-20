@@ -20,7 +20,7 @@ public class FloatingText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = Quaternion.LookRotation(transform.position - mainCam.transform.position);  // look at cam
         transform.position = unit.position + offset;
+        transform.rotation = Quaternion.LookRotation(transform.position - mainCam.position);
     }
 }
