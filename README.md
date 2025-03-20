@@ -68,5 +68,8 @@ This successfully removes the game from the device so we could patch our game to
 This problem is solved by adding script to the ball that checks if the ball is grabbed or not. </br>
 If the ball is grabbed it turns off the bounce material otherwise it has the bounce material and the ball is able to bounce. </br>
 
+**Ball can be held super far away** </br>
+This problem is solved by checking how far the ball is away from the player an detaching the ball from the player when it's 4 units away from the player.
+
 
 
