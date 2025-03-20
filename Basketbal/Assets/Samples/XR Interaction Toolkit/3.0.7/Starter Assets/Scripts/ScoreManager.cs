@@ -2,7 +2,6 @@ using System;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.XR.Interaction.Toolkit;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -14,13 +13,14 @@ public class ScoreManager : MonoBehaviour
     private int yPos = 0;
     private int score = 0;
     private bool allowedToScore = false;
+    private bool tpPlayerOnScore = false;
 
     /// <summary>
     /// When ball goes through hoop
     /// </summary>
     public void IncreaseScore()
     {
-        tpPLayer();
+        if (tpPlayerOnScore) tpPLayer();
 
         if (!allowedToScore) return;
 
@@ -47,11 +47,13 @@ public class ScoreManager : MonoBehaviour
         allowedToScore = false;
         player.transform.position = new Vector3(yPos, 0, 0);
         player.GetComponent<CharacterController>().enabled = false;
+        tpPlayerOnScore = true;
     }
 
     private void OnTimerDone(object sender, EventArgs e)
     {
         allowedToScore = false;
+        tpPlayerOnScore = false;
         timerController.timerDone -= OnTimerDone;
     }
 
