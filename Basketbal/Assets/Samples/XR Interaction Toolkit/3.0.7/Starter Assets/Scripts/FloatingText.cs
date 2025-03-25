@@ -5,7 +5,7 @@ public class FloatingText : MonoBehaviour
     Transform mainCam;
     Transform worldSpaceCanvas;
 
-    public float distanceFromPlayer = 2.0f;
+    public float distanceFromPlayer = 2.0f;     // offset from player
 
     void Start()
     {
@@ -21,7 +21,7 @@ public class FloatingText : MonoBehaviour
         transform.position = mainCam.position + forwardOffset;
 
         Vector3 cameraForward = mainCam.forward;
-        cameraForward.y = 0;
+        cameraForward.y = 0;                    // keeps text upright
         Quaternion lookRotation = Quaternion.LookRotation(cameraForward);
         transform.rotation = lookRotation;
     }
