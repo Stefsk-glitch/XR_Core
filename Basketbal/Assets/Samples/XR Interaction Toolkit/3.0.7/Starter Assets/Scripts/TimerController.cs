@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class TimerController : MonoBehaviour
 {
-    public Text timerText;
+    public TextMesh timerText;
     public float timeValue = 0;
     public bool timerRunning = false;
     public bool countDown = false;
