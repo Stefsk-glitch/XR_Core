@@ -71,5 +71,7 @@ If the ball is grabbed it turns off the bounce material otherwise it has the bou
 **Ball can be held super far away** </br>
 This problem is solved by checking how far the ball is away from the player an detaching the ball from the player when it's 4 units away from the player.
 
+**Issue where buttons are not usable** </br>
+This issue is fixed by removing component named EventSystem in Hierarchy.
 
 
