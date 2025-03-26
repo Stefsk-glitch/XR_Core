@@ -7,6 +7,7 @@ public class FloatingText : MonoBehaviour
 
     public float distanceFromPlayer = 2.0f;     // offset from player
     public float verticalOffset = 0f;
+    public float horizontalOffset = -4f;         // New variable for horizontal offset
 
     void Start()
     {
@@ -20,7 +21,9 @@ public class FloatingText : MonoBehaviour
     {
         Vector3 forwardOffset = mainCam.forward * distanceFromPlayer;
         Vector3 verticalOffsetVector = Vector3.up * verticalOffset;
-        transform.position = mainCam.position + forwardOffset + verticalOffsetVector;
+        Vector3 horizontalOffsetVector = mainCam.right * horizontalOffset;  // New horizontal offset
+
+        transform.position = mainCam.position + forwardOffset + verticalOffsetVector + horizontalOffsetVector;
 
         Vector3 cameraForward = mainCam.forward;
         cameraForward.y = 0;                    // keeps text upright
