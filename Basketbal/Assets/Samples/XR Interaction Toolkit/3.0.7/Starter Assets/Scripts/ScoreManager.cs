@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public Text scoreText;
+    public TextMesh scoreText;
     public TimerController timerController;
     public int pointsToReceive = 2;         // default 2
     public XROrigin player;

@@ -12,7 +12,7 @@ public class FloatingText : MonoBehaviour
     {
         mainCam = Camera.main.transform;
 
-        worldSpaceCanvas = GameObject.FindObjectOfType<Canvas>().transform;
+        worldSpaceCanvas = GameObject.Find("Score Canvas").transform;
         transform.SetParent(worldSpaceCanvas);
     }
 
