@@ -54,24 +54,20 @@
 
 ### Problems we faced during the make of the project
 
-**When attempting to uninstall our game on the Meta Quest 3 by navigating to Library --> Unknown Sources --> Three Dots --> Uninstall, the game did not uninstall as expected. This appears to be a common issue within the Meta community.** </br>
-
-After researching the problem on the Meta forums, we found a solution:
+- **Unable to use the patch button to install a new version of the app on the headset** <br>
+We at some point were unable to patch a newer version of the app to the device, and the only error we got was: failed to patch. Turned out, we had uninstalled a previous version of the app on the device by going to Library > Unknown Sources > Three Dots > Uninstall.
+After researching the problem on the Meta forums, we found out that this still does not properly remove the app, so we found a solution:
 1.	Open Meta Developer Hub
 2.	Go to the Device section
 3.	Run the following command: ```adb uninstall <package>```
+This successfully removed the game from the device so we could patch our game to the Meta Quest 3 again. </br>
 
-This successfully removes the game from the device so we could patch our game to the Meta Quest 3 again. </br>
+- **Pushing ball against the ground made game crash or physics go crazy.** </br>
+When holding the ball, and moving it against another object (floor, wall), the ball would glitch away really fast, and often would make the game lag, or just straight up crash.<br> 
+This problem was solved by adding script to the ball that checks if the ball is grabbed or not. If the ball is grabbed it turns off the bounce material otherwise it has the bounce material and the ball is able to bounce. <br>
 
-**Pushing ball against the ground made game crash or physics go crazy.** </br>
+- **Ball can be held super far away** <br>
+The player would easily be able to score because he could just hold the ball from really far away and put it strait through the basket. This problem was solved by checking how far the ball is away from the player an detaching the ball from the hans when it's 4 units away from the player.
 
-This problem is solved by adding script to the ball that checks if the ball is grabbed or not. </br>
-If the ball is grabbed it turns off the bounce material otherwise it has the bounce material and the ball is able to bounce. </br>
-
-**Ball can be held super far away** </br>
-This problem is solved by checking how far the ball is away from the player an detaching the ball from the player when it's 4 units away from the player.
-
-**Issue where buttons are not usable** </br>
-This issue is fixed by removing component named EventSystem in Hierarchy.
-
-
+- **Issue where buttons are not usable** <br>
+After implementing the floating scoreboard, the buttons to switch between gamemodes suddendly stopped working. We were only able to click the buttons while looking to the right, then clicking the button on the left, or when going into the button. We spent a long time trying to resolve this issue. But finally we figured out that while creating a new Canvas in the Hierarchy, Unity automatically adds an "EventSystem" component to the game as well. This caused our game to handle interaction with buttons very weirdly. After removing this component, the buttons worked again.
