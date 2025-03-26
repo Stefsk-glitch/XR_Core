@@ -46,7 +46,7 @@ public class ScoreManager : MonoBehaviour
         timerController.timeValue = 0;
         timerController.StartTimer();
         score = 0;
-        allowedToScore = false;
+        allowedToScore = true;
         player.GetComponent<CharacterController>().enabled = false;
         tpPlayerOnScore = true;
 
@@ -90,10 +90,5 @@ public class ScoreManager : MonoBehaviour
     public void SetPointsToReceive(int points)
     {
         if (allowedToScore) pointsToReceive = points;
-    }
-
-    public void setText(string text)
-    {
-        scoreText.text = text;
     }
 }
