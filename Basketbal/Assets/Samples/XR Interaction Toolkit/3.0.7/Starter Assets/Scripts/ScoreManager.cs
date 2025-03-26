@@ -9,11 +9,13 @@ public class ScoreManager : MonoBehaviour
     public TimerController timerController;
     public int pointsToReceive = 2;         // default 2
     public XROrigin player;
+    public GameObject cylinderPrefab;
 
-    private int yPos = 0;
+    private int xPos = 0;
     private int score = 0;
     private bool allowedToScore = false;
     private bool tpPlayerOnScore = false;
+    private GameObject spawnedCylinder;
 
     /// <summary>
     /// When ball goes through hoop
@@ -45,9 +47,15 @@ public class ScoreManager : MonoBehaviour
         timerController.StartTimer();
         score = 0;
         allowedToScore = false;
-        player.transform.position = new Vector3(yPos, 0, 0);
         player.GetComponent<CharacterController>().enabled = false;
         tpPlayerOnScore = true;
+
+        if (cylinderPrefab != null && player != null)
+        {
+            spawnedCylinder = Instantiate(cylinderPrefab, new Vector3(xPos, 0, 0), Quaternion.identity);
+        }
+
+        player.transform.position = spawnedCylinder.transform.position + new Vector3(0.5f, 0, 1.25f);
     }
 
     private void OnTimerDone(object sender, EventArgs e)
@@ -59,15 +67,23 @@ public class ScoreManager : MonoBehaviour
 
     private void tpPLayer()
     {
-        if (yPos == -16)
+        if (xPos == -16)
         {
             timerController.StopTimer();
             player.GetComponent<CharacterController>().enabled = true;
+            Destroy(spawnedCylinder);
         }
         else
         {
-            yPos -= 2;
-            player.transform.position = new Vector3(yPos, 0, 0);
+            xPos -= 2;
+
+            Destroy(spawnedCylinder);
+
+            if (cylinderPrefab != null && player != null)
+            {
+                spawnedCylinder = Instantiate(cylinderPrefab, new Vector3(xPos, 0, 0), Quaternion.identity);
+            }
+            player.transform.position = spawnedCylinder.transform.position + new Vector3(0.5f, 0, 1.25f);
         }
     }
 

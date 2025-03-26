@@ -1289,6 +1289,7 @@ MonoBehaviour:
   timerController: {fileID: 339568375}
   pointsToReceive: 2
   player: {fileID: 775461484}
+  cylinderPrefab: {fileID: 7783286751692372177, guid: 2f619a60d34f5c64c8b1c289f1f3b014, type: 3}
 --- !u!4 &721026814
 Transform:
   m_ObjectHideFlags: 0
@@ -3766,7 +3767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.z
